@@ -1,0 +1,112 @@
+.section1{
+    background-color: black;
+}
+.page1{
+    color: white;
+    text-align: center;
+    font-family:algerian;
+    font-size:30px
+}
+
+ .ram{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+   
+   
+}
+
+.wrapper{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.card{
+    margin-top:40px;
+    width:250px;
+     background: #fff;
+     height:300px;
+     border-radius: 10px;
+     display: flex;
+     align-items:center;
+     justify-content:space-evenly;
+     flex-direction:column;
+}
+.circle{
+    position: relative;
+    height:150px;
+    width:150px;
+    /* border:8px solid #fa4299; */
+    border-radius:50%;
+    cursor: default;
+
+
+}
+.box,
+.box span{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+
+}
+
+.box{
+    height: 100%;
+    width: 100%;
+    background:#fff;
+    transform: translate(-50% ,-50%)scale(.08) ;
+    border-radius: 50%;
+    transition:all 0.2  s;
+}
+ .box:hover{
+    transform: translate(-50% ,-50%) scale(.091);
+ }
+
+.box span,
+.text{
+    background:-webkit-linear-gradient(left,#a445b2,#fa4299);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.box span{
+    font-size: 80vh;
+    transform: translate(-45% ,-50%);
+    transition:all 0.1s;
+}
+.box span:hover{
+    transform: translate(-45% ,-50%) scale(1.05);
+ }
+.text{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+@media(max-width:753px){
+    .wrapper{
+        width: 700px;
+      
+    }
+    .card{
+        width:calc(50% - 20px);
+        margin-bottom: 20px;
+      
+    }
+
+}
+@media(max-width:505px){
+    .wrapper{
+        width: 500px;
+      
+    }
+    .card{
+        width:100%;
+        
+      
+    }
+
+}
